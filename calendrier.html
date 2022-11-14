@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="calender.css">
+    <title>calender</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid bg-dark">
+        <div class="row d-flex justify-content-center align-items-center p-0  w-100  bg-dark m-0"
+            style="height: 100vh;">
+            <div class="accordion col-lg-6 col-md-6 col-sm-6 cal-box " id="accordionPanelsStayOpenExample">
+                <div class="accordion-item cal-box">
+                    <div class=" card bg-light  cal-box p-2 accordion-header"
+                        id="panelsStayOpen-headingOne">
+                        <table class="table caption-top table-bordered">
+                            <caption>
+                                <div id="cap-t" class="d-flex justify-content-between">
+
+                                </div>
+                            </caption>
+                            <thead>
+                                <tr>
+
+                                    <th scope="col" class="text-center">lun</th>
+                                    <th scope="col" class="text-center">mar</th>
+                                    <th scope="col" class="text-center">mer</th>
+                                    <th scope="col" class="text-center">jeud</th>
+                                    <th scope="col" class="text-center">vend</th>
+                                    <th scope="col" class="text-center">sam</th>
+                                    <th scope="col" class="text-center">dim</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse "
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                           <textarea name="note_jr" id="note_jr" cols="30" rows="2" class="form-control"></textarea>
+                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-cal11 card text-center   ">
+            Designed by KHALIL
+        </div>
+    </div>
+    
+    <script src="calendrier.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

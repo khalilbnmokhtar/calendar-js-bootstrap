@@ -1,0 +1,224 @@
+#c1:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c2:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c3:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c4:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c5:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c6:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c7:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c8:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c9:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c10:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c11:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c12:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c13:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c14:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c15:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c16:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c17:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c18:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c19:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c20:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c21:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c22:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c23:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c24:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c25:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c26:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c27:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c28:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c29:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c30:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+#c31:hover{
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+table tr td:last-child{
+    background-color: silver;
+}
+table th:last-child{
+    background-color:silver;
+
+}
+
+.btn:hover {
+    background-color: steelblue !important;
+    color: aliceblue;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+
+
+.cal-box{
+    border-radius: 5px 30px 5px 30px !important;
+    box-shadow: rgba(241, 151, 207, 0.25) 0px 14px 28px, rgba(201, 40, 223, 0.22) 0px 10px 10px; 
+}
+
+.box-cal11 {
+    position:absolute !important;
+    bottom: 20px !important;
+    right:  10px !important;
+    border-radius: 5px 30px 5px 30px !important;
+    box-shadow: rgba(241, 151, 207, 0.25) 0px 14px 28px, rgba(201, 40, 223, 0.22) 0px 10px 10px; 
+  
+     width: 200px;
+     border: solid 1px steelblue;
+}
+
+.box-cal11:hover{
+    color: white;
+    background-color: rgb(238, 29, 186);
+    font-size: 18px;
+    font-weight: bold;
+}
