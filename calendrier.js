@@ -18,7 +18,7 @@ console.log(jr_cour)
 affichecap(mois_cour, ann_cour)
 
 function affichecap(m, a) {
-    table_cap.innerHTML = `<input type="button" id="presed" onclick="pres()" class="btn btn-sm" value="<"/> <h5>${mois[m]} ${a}</h5><input type="button" id="suiv" onclick="suiv()" class="btn btn-sm" value=">"/>`
+    table_cap.innerHTML = `<input type="button" id="presed" onclick="pres()" class="btn btn-sm fs-5" value="<"/> <h5>${mois[m]} ${a}</h5><input type="button" id="suiv" onclick="suiv()" class="btn btn-sm fs-5" value=">"/>`
 }
 
 
