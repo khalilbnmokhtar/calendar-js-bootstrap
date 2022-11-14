@@ -34,6 +34,10 @@ function suiv() {
         affichecap(mois_cour, ann_cour)
     }
     affiche_mois(ann_cour, mois_cour)
+    jr_cour = d.getDate()
+let td = document.getElementById('c'+jr_cour)
+if (mois_cour == d.getMonth())
+{td.style.backgroundColor='steelblue'}
 
 }
 
@@ -53,6 +57,10 @@ function pres() {
     }
 
     affiche_mois(ann_cour, mois_cour)
+    jr_cour = d.getDate()
+let td = document.getElementById('c'+jr_cour)
+if (mois_cour == d.getMonth())
+{td.style.backgroundColor='steelblue'}
    
 }
 
@@ -155,7 +163,7 @@ function affiche_mois(ann, mois) {
     
     table += '</tr>'
 
-    tbody.innerHTML = table;
+    tbody.innerHTML = table;  
 }
 
 function getDay(date) { 
@@ -165,9 +173,9 @@ function getDay(date) {
 }
 
 affiche_mois(ann_cour, mois_cour)
+
 jr_cour = d.getDate()
 let td = document.getElementById('c'+jr_cour)
 td.style.backgroundColor='steelblue'
-
 
 
