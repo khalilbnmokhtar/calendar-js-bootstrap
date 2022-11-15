@@ -129,7 +129,37 @@ function affiche_table(m) {
 
 affiche_table(mois_cour)*/
 
- let note_jr = document.getElementById('note_jr')
+   function verif(d)
+{    
+    let div = document.getElementById('d'+d)
+    let note_jr = document.getElementById('note_jr')
+    note_jr.value = div.innerText
+
+    note_jr.onkeyup = () => { 
+    
+        if (note_jr.value == '' || note_jr.value == "zero evenement")
+        {div.innerHTML = "zero evenement"}   
+        
+        else  
+        {div.innerHTML = note_jr.value.substr(0,6)}
+        
+    }   
+    if (note_jr.value !== "zero evenement")
+    {
+        div.classList.remove('d-none')
+       
+    }
+    else
+    {
+        div.classList.add('d-none')
+    }
+   
+   
+} 
+
+   
+   
+
 function affiche_mois(ann, mois) {
     
     let mon = mois ; 
@@ -143,10 +173,11 @@ function affiche_mois(ann, mois) {
     }
 
     
+    
     while (d.getMonth() == mon) {
 
-        table += `<td id="c${d.getDate()}" class ="text-center" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">  ${d.getDate()} <div style="width: 20px; height: 10px; background-color: red;" id="d${d.getDate()}" class="d-none"></div></td>`;
-       
+        table += `<td id="c${d.getDate()}" onclick="verif(this.id)"  class ="text-center" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" >  ${d.getDate()} <div  style="width: 20px; height: 10px; background-color: red; font-size: 8px" id="dc${d.getDate()}" class="d-none" > zero evenement </div></td>`;
+        
         if (getDay(d) % 7 == 6) { 
             table += '</tr><tr>';
         }
