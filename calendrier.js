@@ -11,6 +11,7 @@ console.log(jr_cour)
 
 
 
+let tableau = JSON.parse(localStorage.getItem('calender') || '[]')
 
 
 
@@ -131,28 +132,68 @@ affiche_table(mois_cour)*/
 
    function verif(d)
 {    
+    
     let div = document.getElementById('d'+d)
     let note_jr = document.getElementById('note_jr')
     note_jr.value = div.innerText
 
     note_jr.onkeyup = () => { 
     
-        if (note_jr.value == '' || note_jr.value == "zero evenement")
-        {div.innerHTML = "zero evenement"}   
+        if (note_jr.value =='' || note_jr.value == "zero evenement")
+        {
+            
+            div.innerHTML = "zero evenement"
+            for(let i=0; i< tableau.length; i++)
+            {
+                if (div.innerHTML=="zero evenement")
+                {
+                    tableau.splice(i,1)
+                }
+            }
+
+        }   
         
         else  
-        {div.innerHTML = note_jr.value.substr(0,6)}
+        {
+            div.innerHTML = note_jr.value.substr(0,6)
+            
+        }
         
     }   
+    console.log(note_jr.value)
     if (note_jr.value !== "zero evenement")
     {
+
         div.classList.remove('d-none')
-       
+        let obje_mem ={ 
+            even : note_jr.value.substr(0,6),
+            index : d,
+            a :ann_cour,
+            m : mois_cour
+        }
+        console.log(obje_mem)
+        
+             tableau.push(obje_mem)            
+       /* tableau.forEach(element => {
+           if (element.index == obje_mem.index)
+           {  if (element.even !== obje_mem.even)
+                    {tableau.replace(element,obje_mem)} 
+                else
+                {tableau.push(obje_mem)}
+            }
+
+           
+        });*/
+        
+        localStorage.calender = JSON.stringify(tableau)
+        
+    
     }
     else
     {
         div.classList.add('d-none')
-    }
+    } 
+    
    
    
 } 
@@ -174,9 +215,11 @@ function affiche_mois(ann, mois) {
 
     
     
+    
     while (d.getMonth() == mon) {
 
-        table += `<td id="c${d.getDate()}" onclick="verif(this.id)"  class ="text-center" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" >  ${d.getDate()} <div  style="width: 20px; height: 10px; background-color: red; font-size: 8px" id="dc${d.getDate()}" class="d-none" > zero evenement </div></td>`;
+        table += `<td id="c${d.getDate()}" onclick="verif(this.id)"  class ="text-center" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" >  ${d.getDate()} <div  style="width: 20px; height: 10px; background-color: red; font-size: 8px" id="dc${d.getDate()}" class="d-none" >zero evenement</div></td>`;
+       
         
         if (getDay(d) % 7 == 6) { 
             table += '</tr><tr>';
@@ -185,6 +228,7 @@ function affiche_mois(ann, mois) {
         d.setDate(d.getDate() + 1);
     }
 
+   
     if (getDay(d) != 0) {
         for (let i = getDay(d); i < 7; i++) {
             table += '<td></td>';
@@ -194,7 +238,29 @@ function affiche_mois(ann, mois) {
     
     table += '</tr>'
 
-    tbody.innerHTML = table;  
+    tbody.innerHTML = table; 
+    
+    for(let i=0; i< tableau.length; i++)
+    {
+        var div = document.getElementById(`d${tableau[i].index}`)
+
+       
+        
+        if (tableau[i].a == ann && tableau[i].m == mon)
+        {
+       
+        console.log(div.innerHTML)
+        div.innerHTML = tableau[i].even
+         div.classList.remove('d-none')
+        }
+    }
+    
+     
+       
+        
+    
+
+
 }
 
 function getDay(date) { 
