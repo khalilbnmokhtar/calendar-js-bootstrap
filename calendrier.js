@@ -1,7 +1,7 @@
 let tbody = document.getElementById('tbody')
 let table_cap = document.getElementById('cap-t')
 let annee = 2022
-let mois = ['janvier', 'fevrier', 'mars', 'avril', 'mais', 'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre']
+let mois = ['janvier','fevrier', 'mars', 'avril', 'mais', 'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre']
 
 let d = new Date()
 let ann_cour = d.getFullYear()
@@ -9,11 +9,7 @@ let mois_cour = d.getMonth()
 let jr_cour = d.getDay()
 console.log(jr_cour)
 
-
-
 let tableau = JSON.parse(localStorage.getItem('calender') || '[]')
-
-
 
 
 affichecap(mois_cour, ann_cour)
@@ -143,13 +139,6 @@ affiche_table(mois_cour)*/
         {
             
             div.innerHTML = "zero evenement"
-            for(let i=0; i< tableau.length; i++)
-            {
-                if (div.innerHTML=="zero evenement")
-                {
-                    tableau.splice(i,1)
-                }
-            }
 
         }   
         
@@ -160,10 +149,9 @@ affiche_table(mois_cour)*/
         }
         
     }   
-    console.log(note_jr.value)
-    if (note_jr.value !== "zero evenement")
+   
+    if (div.innerHTML !== "zero evenement")
     {
-
         div.classList.remove('d-none')
         let obje_mem ={ 
             even : note_jr.value.substr(0,6),
@@ -171,35 +159,28 @@ affiche_table(mois_cour)*/
             a :ann_cour,
             m : mois_cour
         }
-        console.log(obje_mem)
-        
-             tableau.push(obje_mem)            
-       /* tableau.forEach(element => {
-           if (element.index == obje_mem.index)
-           {  if (element.even !== obje_mem.even)
-                    {tableau.replace(element,obje_mem)} 
-                else
-                {tableau.push(obje_mem)}
-            }
-
+          let bool = false     
+        for(i=0;i<tableau.length;i++) {
+           if (tableau[i].index == obje_mem.index && tableau[i].even !== obje_mem.even)
+           { tableau.replace(tableau[i],obje_mem)
+              bool = true   }
+           else if (tableau[i].index == obje_mem.index && tableau[i].even == obje_mem.even )
+           {tableau.splice(i,1)
+               bool =true }
            
-        });*/
-        
-        localStorage.calender = JSON.stringify(tableau)
-        
-    
+
+        }
+        if ( bool == false)
+        {tableau.push(obje_mem)}    
     }
     else
     {
         div.classList.add('d-none')
     } 
     
-   
-   
+    localStorage.calender = JSON.stringify(tableau)    
 } 
 
-   
-   
 
 function affiche_mois(ann, mois) {
     
